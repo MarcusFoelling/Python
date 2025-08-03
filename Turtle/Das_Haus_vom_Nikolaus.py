@@ -4,10 +4,11 @@ import turtle  # Bestandteil von tkinter
 # Hausparameter
 a = 100  # Seitenlänge der Grundfläche in Pixel
 # Startposition (unten links)
-x, y = 0, 0  # 0,0 entspricht Mitte des Fensters
+x, y = 0 - a/2, 0 - a/2  # 0,0 entspricht Mitte des Fensters
 
 # Fenster einrichten
-turtle.title("Haus vom Nikolaus")
+turtle.title("Das Haus vom Nikolaus")
+turtle.setup(a * 3, a * 3)  # Fensterbreite, Fensterhöhe in Pixel
 turtle.shape("turtle")  # arrow, circle, ...
 turtle.speed(3)  # 0 = sofort, 1 - 10 sehr schnell => help(turtle.speed)
 turtle.pensize(3)
