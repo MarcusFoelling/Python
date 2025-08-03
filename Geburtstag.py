@@ -4,7 +4,7 @@ from datetime import datetime
 locale.setlocale(locale.LC_TIME, "de_DE.UTF-8")
 
 while True:
-    eingabe = input("Wann wurdest Du geboren? (TT.MM.JJJJ) ")
+    eingabe = input("\n\nWann wurdest Du geboren? (TT.MM.JJJJ) ")
     try:
         geburtstag = datetime.strptime(eingabe, "%d.%m.%Y")
         break
@@ -12,7 +12,7 @@ while True:
         print("Eingabe fehlerhaft, bitte erneut versuchen.")
 
 wochentag = geburtstag.strftime("%A")
-print(f"Du wurdest an einem {wochentag} geboren.")
+print(f"\n\nDu wurdest an einem {wochentag} geboren.")
 
 differenz = datetime.today() - geburtstag
 print(f"Du bist bereits {differenz.total_seconds()} Sekunden alt")
